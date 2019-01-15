@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams,LoadingController } from 'ionic-angular';
+import { ViewChild } from '@angular/core';
+import { Slides } from 'ionic-angular';
+import { UsuarioProvider } from '../../providers/usuario/usuario';
+import { HomePage } from '../home/home';
+import {Md5} from 'ts-md5/dist/md5';
 
 @IonicPage()
 @Component({
@@ -15,11 +13,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  usuarioAutenticado:boolean= true; 
+  LogNameNet:string ="";
+  Password:string ="";
+  @ViewChild(Slides) slides: Slides;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl:LoadingController,public _usuarioProvider:UsuarioProvider) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
+  verificarUsuario(){
+    let loading = this.loadingCtrl.create({
+      content:'verificando'
+    });
+    loading.present();
 
+    let password:any= Md5.hashStr(this.Password.toLowerCase());
+    this._usuarioProvider.verificarUsuario(this.LogNameNet.toLowerCase(),password)
+    .then(existe => {
+      loading.dismiss();
+        if(existe){
+          this.navCtrl.setRoot(HomePage);
+        }
+        else{
+         this.usuarioAutenticado=false;
+        }
+    });
+  }
 }
