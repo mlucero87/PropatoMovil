@@ -27,6 +27,7 @@ export class UsuarioProvider {
             if(Usuario.length === 1){
               this.Password = Usuario[0].Password;
               this.User = Usuario[0].LogNameNet;
+              this.SessionID = Usuario[0].SessionID;
               this.guardarStorage();
               resolve(true);
             } else{
@@ -50,11 +51,44 @@ export class UsuarioProvider {
    }
   }
 
+  validarSessionID(){
+    debugger;
+    var SessionID = this.storage.get('SessionID');
+    return new Promise((resolve,reject) =>{
+      if(this.platform.is('cordoba')){
+        //Celular
+        this.storage.get('SessionID').then((val) => {
+         if(val){
+           
+           resolve(true);
+         }
+         else{
+           resolve(false);
+         }
+        });
+
+     }
+     else{
+        //navegador
+        if(localStorage.getItem('SessionID'))
+          {
+            this.User = localStorage.getItem('SessionID');
+            resolve(true)
+          }
+          else{
+            resolve(false);
+          }
+
+     }
+
+    })
+  }
+
   obtenerStorage(){
     return new Promise((resolve,reject) =>{
       if(this.platform.is('cordoba')){
         //Celular
-        this.storage.get('User').then((val) => {
+        this.storage.get('SessionID').then((val) => {
          if(val){
            this.User = val;
            resolve(true);
