@@ -10,10 +10,18 @@ export class UsuarioProvider {
   Password: string = "";
   User: string = "";
   SessionID: string = "";
+
+  // objUsuario = [{
+  //   LogNameNet:"",
+  //   SessionID:"",
+  //   ID:null,
+  //   Mail:"",
+  //   Password:""
+  // }];
+
   private doc: Subscription;
 
   constructor(private afDB: AngularFirestore, private platform: Platform, private storage: Storage) {
-
   }
 
   verificarUsuario(user: string, Password: string) {
@@ -23,11 +31,12 @@ export class UsuarioProvider {
         .valueChanges()
         .subscribe(data => {
           if (data) {
-            let Usuario = data.filter(dato => dato.LogNameNet === user && dato.Password === Password);
+            debugger;
+            let Usuario = data.filter(dato => dato['LogNameNet'] === user && dato['Password'] === Password);
             if (Usuario.length === 1) {
-              this.Password = Usuario[0].Password;
-              this.User = Usuario[0].LogNameNet;
-              this.SessionID = Usuario[0].SessionID;
+              this.Password = Usuario[0]['Password'];
+              this.User = Usuario[0]['LogNameNet'];
+              this.SessionID = Usuario[0]['SessionID'];
               this.guardarStorage();
               resolve(true);
             } else {
