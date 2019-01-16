@@ -18,7 +18,7 @@ export class UsuarioProvider {
 
   verificarUsuario(user: string, Password: string) {
     Password = Password.toLocaleLowerCase();
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => { 
       this.doc = this.afDB.collection('usuarios')
         .valueChanges()
         .subscribe(data => {

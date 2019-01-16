@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Platform, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
@@ -17,7 +17,7 @@ export class MyApp {
   DetalleRuta = DetalleRutaPage;
   Scan = ScanPage;
   
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private _usuarioProvider: UsuarioProvider) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private _usuarioProvider: UsuarioProvider, private menuCtrl :MenuController) {
     platform.ready().then(() => {
       _usuarioProvider.validarSessionID().then(existe => {
         statusBar.styleDefault();
@@ -33,10 +33,12 @@ export class MyApp {
 
   open(page:any){
     this.rootPage = page;
+    this.menuCtrl.toggle();
   }
 
   login() {
     this._usuarioProvider.borrarUsuarioStorage();
+    this.menuCtrl.toggle();
     this.rootPage = LoginPage;
   }
 }
