@@ -1,34 +1,34 @@
 <ion-content padding>
-  
-    <ion-slides pager>
 
-        <ion-slide>
+  <ion-slides pager>
 
-          <img src="assets/imgs/logo.png" class="slide-image" />
-          <ion-list padding no-lines>
-              <ion-item>
-                <ion-label color="primary" stacked>Usuario</ion-label>
-                <ion-input type="text" [(ngModel)]="LogNameNet" placeholder="Usuario"></ion-input>
-               </ion-item>
-               
-               <ion-item>
-                 <ion-label color="primary" stacked>Contraseña</ion-label>
-                 <ion-input type="password" [(ngModel)]="Password" placeholder="Contraseña"></ion-input>
-               </ion-item>
-               
-               <ion-item *ngIf="!usuarioAutenticado">
-                 <h4>Usuario y/o Contraseña incorrectos.</h4>
-               </ion-item>
-               
-               <ion-item>
-                 <button ion-button block color="succes" (click)="verificarUsuario()">Ingresar</button>
-               </ion-item>
-               
-               <!-- <ion-item>
+    <ion-slide>
+
+      <img src="assets/imgs/logo.png" class="slide-image" />
+      <ion-list padding no-lines>
+        <ion-item>
+          <ion-label color="primary" stacked>Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="LogNameNet" placeholder="Usuario"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" stacked>Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="Password" placeholder="Contraseña"></ion-input>
+        </ion-item>
+
+        <ion-item *ngIf="!usuarioAutenticado">
+          <h4>Usuario y/o Contraseña incorrectos.</h4>
+        </ion-item>
+
+        <ion-item>
+          <button ion-button block color="succes" (click)="verificarUsuario()">Ingresar</button>
+        </ion-item>
+
+        <!-- <ion-item>
                  <button ion-button clear [navPush]="olvidoPassword">Olvide mi contraseña.</button>
                </ion-item> -->
-          </ion-list>
+      </ion-list>
 
-        </ion-slide>
-    </ion-slides>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

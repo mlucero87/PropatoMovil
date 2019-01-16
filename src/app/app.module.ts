@@ -13,13 +13,18 @@ import { IonicStorageModule } from '@ionic/storage';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { firebaseConfig } from '../config/firebase.config';
+// Paginas
+import { ScanPage } from '../pages/scan/scan';
+import { DetalleRutaPage } from './../pages/detalle-ruta/detalle-ruta';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    ScanPage,
+    DetalleRutaPage
   ],
   imports: [
     BrowserModule,
@@ -32,13 +37,15 @@ import { firebaseConfig } from '../config/firebase.config';
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    ScanPage,
+    DetalleRutaPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     UsuarioProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }
