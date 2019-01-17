@@ -35,8 +35,9 @@ export class DetalleRutaPage {
 
   verDetallePedido(dataPedido) {
     console.log(dataPedido);
-    let profileModal = this.modalCtrl.create(DetallePedidoPage, { Remito: dataPedido.Remito },);
-    profileModal.present();
+    this.navCtrl.push(DetallePedidoPage);
+    // let profileModal = this.modalCtrl.create(DetallePedidoPage, { Remito: dataPedido.Remito },);
+    // profileModal.present();
   }
 
   verMapa(dataPedido) {
