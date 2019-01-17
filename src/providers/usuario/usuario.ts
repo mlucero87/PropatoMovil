@@ -11,14 +11,6 @@ export class UsuarioProvider {
   User: string = "";
   SessionID: string = "";
 
-  // objUsuario = [{
-  //   LogNameNet:"",
-  //   SessionID:"",
-  //   ID:null,
-  //   Mail:"",
-  //   Password:""
-  // }];
-
   private doc: Subscription;
 
   constructor(private afDB: AngularFirestore, private platform: Platform, private storage: Storage) {
