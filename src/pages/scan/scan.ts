@@ -1,25 +1,25 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { DetalleRutaPage } from '../detalle-ruta/detalle-ruta'
 
-/**
- * Generated class for the ScanPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
-@IonicPage()
 @Component({
   selector: 'page-scan',
   templateUrl: 'scan.html',
 })
 export class ScanPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ScanPage');
+  realizarScanRuta() {
+    this.barcodeScanner.scan().then(barcodeData => {
+      if (barcodeData.cancelled == false && barcodeData.text != null) {
+        this.navCtrl.push(DetalleRutaPage,barcodeData.text);
+      }
+
+    }).catch(err => {
+      console.log('Error', err);
+    });
   }
 
 }

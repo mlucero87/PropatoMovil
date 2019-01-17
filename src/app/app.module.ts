@@ -8,7 +8,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { UsuarioProvider } from '../providers/usuario/usuario';
 import { IonicStorageModule } from '@ionic/storage';
-
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { DetallePedidoPage } from './../pages/detalle-pedido/detalle-pedido';
 // FIREBASE
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -24,7 +25,8 @@ import { DetalleRutaPage } from './../pages/detalle-ruta/detalle-ruta';
     HomePage,
     LoginPage,
     ScanPage,
-    DetalleRutaPage
+    DetalleRutaPage,
+    DetallePedidoPage
   ],
   imports: [
     BrowserModule,
@@ -39,11 +41,13 @@ import { DetalleRutaPage } from './../pages/detalle-ruta/detalle-ruta';
     HomePage,
     LoginPage,
     ScanPage,
-    DetalleRutaPage
+    DetalleRutaPage,
+    DetallePedidoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     UsuarioProvider
   ]

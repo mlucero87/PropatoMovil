@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { ScanPage } from './../pages/scan/scan';
 import { DetalleRutaPage } from './../pages/detalle-ruta/detalle-ruta';
 
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -23,7 +24,7 @@ export class MyApp {
         statusBar.styleDefault();
         splashScreen.hide();
         if (existe) {
-          this.rootPage = HomePage;
+          this.rootPage = DetalleRutaPage;
         } else {
           this.rootPage = LoginPage;
         }
