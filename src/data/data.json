@@ -1,0 +1,131 @@
+{
+    "data": [
+        {
+            "CodigoRuta": "R002",
+            "Destinos": 4,
+            "Remitos": 6,
+            "Kilos": 1290,
+            "Bultos": 650,
+            "DetalleRuta": [
+                {
+                    "CodigoRuta": "R002",
+                    "ClienteCodigo": "046310",
+                    "ClienteRazSoc": "AFRODINA S.A.",
+                    "ClienteDireccion": "Goleta Sta Cruz 6873 P.4 D.E",
+                    "Remito": "R-0009-00321654",
+                    "Bultos": 100,
+                    "NroGuia": "000012",
+                    "estado": true,
+                    "DetallePedido": [
+                        {
+                            "Renglon": 1,
+                            "CodigoArticulo": "12203",
+                            "Descripcion": "JERINGA DES.10ml S/AGUJA",
+                            "Cantidad": 24,
+                            "Lote": "aaa123",
+                            "vto": "01/10/2025"
+                        },
+                        {
+                            "Renglon": 2,
+                            "CodigoArticulo": "10200",
+                            "Descripcion": "PAÑAL ADULTO C/GEL GRANDE (3x50)",
+                            "Cantidad": 5,
+                            "Lote": "bbb123",
+                            "vto": "01/08/2025"
+                        },
+                        {
+                            "Renglon": 3,
+                            "CodigoArticulo": "62006",
+                            "Descripcion": "GUANTES EXAMEN LATEX MEDIANO",
+                            "Cantidad": 100,
+                            "Lote": "ccc123",
+                            "vto": "01/05/2025"
+                        },
+                        {
+                            "Renglon": 4,
+                            "CodigoArticulo": "96946",
+                            "Descripcion": "VENDA ELASTICA BEIGE 15cm x 2,5m",
+                            "Cantidad": 20,
+                            "Lote": "ddd123",
+                            "vto": "01/01/2025"
+                        },
+                        {
+                            "Renglon": 5,
+                            "CodigoArticulo": "20419",
+                            "Descripcion": "ABRE BOCA P/EMERGENCIAS",
+                            "Cantidad": 100,
+                            "Lote": "eee123",
+                            "vto": "01/07/2025"
+                        },
+                        {
+                            "Renglon": 6,
+                            "CodigoArticulo": "31364",
+                            "Descripcion": "AGUJA DESCARTABLE 25x7 22Gx1",
+                            "Cantidad": 90,
+                            "Lote": "fff123",
+                            "vto": "01/11/2025"
+                        },
+                        {
+                            "Renglon": 7,
+                            "CodigoArticulo": "16756",
+                            "Descripcion": "CEPILLO ENDOCERVICAL",
+                            "Cantidad": 50,
+                            "Lote": "ggg123",
+                            "vto": "01/04/2025"
+                        }
+                    ]
+                },
+                {
+                    "CodigoRuta": "R002",
+                    "ClienteCodigo": "003751",
+                    "ClienteRazSoc": "AGILE SYSTEMS S.A.",
+                    "ClienteDireccion": "ESTOMBA 3875",
+                    "Remito": "R-0009-00321657",
+                    "Bultos": 300,
+                    "NroGuia": "000013",
+                    "estado": false
+                },
+                {
+                    "CodigoRuta": "R002",
+                    "ClienteCodigo": "017507",
+                    "ClienteRazSoc": "ALMIRON-CINTHIA CECILIA",
+                    "ClienteDireccion": "MANZANARES 1678",
+                    "Remito": "R-0009-00321612",
+                    "Bultos": 400,
+                    "NroGuia": "000014",
+                    "estado": false
+                },
+                {
+                    "CodigoRuta": "R002",
+                    "ClienteCodigo": "043966",
+                    "ClienteRazSoc": "ALVES PEQUENO MONIQUE",
+                    "ClienteDireccion": "Av. Rivadavia 7055 Dto.15",
+                    "Remito": "R-0009-00056987",
+                    "Bultos": 100,
+                    "NroGuia": "000015",
+                    "estado": true
+                },
+                {
+                    "CodigoRuta": "R002",
+                    "ClienteCodigo": "047236",
+                    "ClienteRazSoc": "ANALEN S.R.L.",
+                    " ClienteDireccion": "PJE. Prometeo 3108",
+                    "Remito": "R-0009-00566965",
+                    "Bultos": 200,
+                    "NroGuia": "000016",
+                    "estado": false
+                },
+                {
+                    "CodigoRuta": "R002",
+                    "ClienteCodigo": "044474",
+                    "ClienteRazSoc": "ARHMED SERVICIOS DE SALUD S.R.L.",
+                    "ClienteDireccion": "Montevideo 665 P.7 D.715",
+                    "Remito": "R-0009-00069123",
+                    "Bultos": 100,
+                    "NroGuia": "000017",
+                    "estado": false
+                }
+            ]
+        }
+    ]
+}

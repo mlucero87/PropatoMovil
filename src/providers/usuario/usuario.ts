@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Platform } from 'ionic-angular';
-import { platformBrowser } from '@angular/platform-browser';
 import { Storage } from '@ionic/storage';
 import { Subscription } from 'rxjs';
 
@@ -11,7 +10,7 @@ export class UsuarioProvider {
   User: string = "";
   SessionID: string = "";
 
-  private doc: Subscription;
+  doc: Subscription;
 
   constructor(private afDB: AngularFirestore, private platform: Platform, private storage: Storage) {
   }
@@ -52,7 +51,7 @@ export class UsuarioProvider {
   }
 
   validarSessionID() {
-    var SessionID = this.storage.get('SessionID');
+    // var SessionID = this.storage.get('SessionID');
     return new Promise((resolve, reject) => {
       if (this.platform.is('cordoba')) {
         //Celular

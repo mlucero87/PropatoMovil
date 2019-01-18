@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, Backdrop } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { DetallePedidoPage } from './../detalle-pedido/detalle-pedido';
 import { MapPage } from '../map/map';
+import 'rxjs/add/operator/map';
+
 @IonicPage()
 @Component({
   selector: 'page-detalle-ruta',
@@ -25,17 +27,18 @@ export class DetalleRutaPage {
     { CodigoRuta: "R002", ClienteCodigo: "047236", ClienteRazSoc: "ANALEN S.R.L.", ClienteDireccion: "PJE. Prometeo 3108", Remito: "R-0009-00566965", Bultos: 200, NroGuia: "000016", estado: false },
     { CodigoRuta: "R002", ClienteCodigo: "044474", ClienteRazSoc: "ARHMED SERVICIOS DE SALUD S.R.L.", ClienteDireccion: "Montevideo 665 P.7 D.715", Remito: "R-0009-00069123", Bultos: 100, NroGuia: "000017", estado: false },
   ]
-  title: string = "Ruta Asignada " + this.dataDetalleRuta[0].CodigoRuta;
 
+  title: string = "Ruta Asignada " + this.dataDetalleRuta[0].CodigoRuta;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
+  
 
-  verDetallePedido(dataPedido) {
-    this.navCtrl.push(DetallePedidoPage,{ Remito: dataPedido.Remito });
-  }
+verDetallePedido(dataPedido) {
+  this.navCtrl.push(DetallePedidoPage, { Remito: dataPedido.Remito });
+}
 
-  verMapa(dataPedido) {
-    this.navCtrl.push(MapPage);
-  }
+verMapa(dataPedido) {
+  this.navCtrl.push(MapPage);
+}
 }

@@ -4,7 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { UsuarioProvider } from '../providers/usuario/usuario';
-import { HomePage } from '../pages/home/home';
 import { ScanPage } from './../pages/scan/scan';
 import { DetalleRutaPage } from './../pages/detalle-ruta/detalle-ruta';
 
