@@ -23,7 +23,6 @@ export class UsuarioProvider {
         .valueChanges()
         .subscribe(data => {
           if (data) {
-            debugger;
             let Usuario = data.filter(dato => dato['LogNameNet'] === user && dato['Password'] === Password);
             if (Usuario.length === 1) {
               this.Password = Usuario[0]['Password'];

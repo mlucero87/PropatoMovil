@@ -1,15 +1,32 @@
 <ion-header>
-    <ion-navbar color="primary" padding>
-      <ion-buttons>
-        <button ion-button icon-only menuToggle>
-          <ion-icon name="menu"> Detalle Pedido </ion-icon>
-        </button>
-      </ion-buttons>
-    </ion-navbar>
-  
-  </ion-header>
+  <ion-navbar color="primary" padding>
+    <ion-buttons>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"> Detalle Remito</ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
 
 
 <ion-content padding>
 
+  <ion-grid *ngFor="let item of DetallePedidoTrabajo" padding>
+    <ion-row>
+      <div>Art: {{item.CodigoArticulo}} {{item.Descripcion}}</div>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-3>
+        <div>Cant: {{item.Cantidad}}</div>
+      </ion-col>
+      <ion-col col-4>
+        <div>L: {{item.Lote}}</div>
+      </ion-col>
+      <ion-col col-5>
+        <div>Vto: {{item.vto}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

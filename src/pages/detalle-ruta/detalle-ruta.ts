@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams , ModalController, Backdrop} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, Backdrop } from 'ionic-angular';
 import { DetallePedidoPage } from './../detalle-pedido/detalle-pedido';
+import { MapPage } from '../map/map';
 @IonicPage()
 @Component({
   selector: 'page-detalle-ruta',
@@ -27,20 +28,14 @@ export class DetalleRutaPage {
   title: string = "Ruta Asignada " + this.dataDetalleRuta[0].CodigoRuta;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public modalCtrl: ModalController) {
-    // this.RutaAsignada = this.navParams.data;
-    // console.log(this.RutaAsignada);
-
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
   verDetallePedido(dataPedido) {
-    console.log(dataPedido);
-    this.navCtrl.push(DetallePedidoPage);
-    // let profileModal = this.modalCtrl.create(DetallePedidoPage, { Remito: dataPedido.Remito },);
-    // profileModal.present();
+    this.navCtrl.push(DetallePedidoPage,{ Remito: dataPedido.Remito });
   }
 
   verMapa(dataPedido) {
-    console.log(dataPedido);
+    this.navCtrl.push(MapPage);
   }
 }
