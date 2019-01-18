@@ -8,7 +8,6 @@ import { IonicPage, NavController, NavParams,ToastController } from 'ionic-angul
 })
 export class DetallePedidoPage {
 
-
   DetallePedido: any = [
     {Remito:"R-0009-00321654",Renglon:1,CodigoArticulo:"12203",Descripcion:"JERINGA DES.10ml S/AGUJA", Cantidad:24, Lote:"aaa123", vto:"01/10/2025"},
     {Remito:"R-0009-00321654",Renglon:2,CodigoArticulo:"10200",Descripcion:"PAÑAL ADULTO C/GEL GRANDE (3x50)", Cantidad:5, Lote:"bbb123", vto:"01/08/2025"},
@@ -20,9 +19,7 @@ export class DetallePedidoPage {
   ];
   
   DetallePedidoTrabajo:any;
-
   Remito: string = "";
-  // this.DetallePedido = [{Remito:"DetallePedido",}];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public toastCtrl: ToastController) {
     this.Remito = navParams.data['Remito'];
@@ -36,9 +33,11 @@ export class DetallePedidoPage {
         position: 'middle'
     });
     toast.present();
-      // this.tool.MostrarMensaje("Ocurrio un error al cargar el pedido o el mismo no tiene detalle",5000,"asd");
     }
   }
 
+  entregarPedido(){
+    
+  }
 
 }
