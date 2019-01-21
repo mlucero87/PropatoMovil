@@ -8,8 +8,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MapPage {
 
-  lat: number = 51.678418;
-  lng: number = 7.809007;
+  lat: number = -34.600510899999996;
+  lng: number = -58.5486797;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

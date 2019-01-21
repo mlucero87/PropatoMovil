@@ -1,5 +1,15 @@
+<ion-header>
+  <ion-navbar color="primary" padding>
+    <ion-buttons>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"> Detalle Remito</ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
 <ion-content padding>
-  <agm-map [latitude]="lat" [longitude]="lng" [zoom]=18>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]=15>
     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
   </agm-map>
 </ion-content>

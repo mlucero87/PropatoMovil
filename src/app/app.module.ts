@@ -1,3 +1,4 @@
+import { MapPage } from './../pages/map/map';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -28,7 +29,8 @@ import { AgmCoreModule } from '@agm/core';
     ScanPage,
     DetalleRutaPage,
     DetallePedidoPage,
-    RutaPage
+    RutaPage,
+    MapPage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ import { AgmCoreModule } from '@agm/core';
     ScanPage,
     DetalleRutaPage,
     DetallePedidoPage,
-    RutaPage
+    RutaPage,
+    MapPage
   ],
   providers: [
     StatusBar,
