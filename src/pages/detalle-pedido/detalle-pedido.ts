@@ -28,16 +28,11 @@ export class DetallePedidoPage {
     if(this.DetallePedidoTrabajo.length == 0)
     {
       const toast = this.toastCtrl.create({
-        message: 'Ocurrio un error al cargar el pedido o el mismo no tiene detalle',
+        message: 'El pedido no tiene detalle',
         duration: 3000,
         position: 'middle'
     });
     toast.present();
     }
   }
-
-  entregarPedido(){
-    
-  }
-
 }
