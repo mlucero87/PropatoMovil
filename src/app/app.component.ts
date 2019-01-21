@@ -9,6 +9,7 @@ import { DetalleRutaPage } from './../pages/detalle-ruta/detalle-ruta';
 import { RutaPage } from './../pages/ruta/ruta';
 import { HomePage } from '../pages/home/home';
 
+
 @Component({
   templateUrl: 'app.html'
 })

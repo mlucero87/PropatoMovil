@@ -18,6 +18,7 @@ import { firebaseConfig } from '../config/firebase.config';
 import { ScanPage } from '../pages/scan/scan';
 import { DetalleRutaPage } from './../pages/detalle-ruta/detalle-ruta';
 import { RutaPage } from './../pages/ruta/ruta';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,12 @@ import { RutaPage } from './../pages/ruta/ruta';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     IonicStorageModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyA-HXVa2jtkGfKtIJwisxgC46RaWqC1xuI'
+    }),
+    
   ],
+  exports: [AgmCoreModule],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -52,6 +58,6 @@ import { RutaPage } from './../pages/ruta/ruta';
     BarcodeScanner,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     UsuarioProvider
-  ]
+  ],
 })
 export class AppModule { }
