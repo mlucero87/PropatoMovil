@@ -17,7 +17,7 @@ import { firebaseConfig } from '../config/firebase.config';
 // Paginas
 import { ScanPage } from '../pages/scan/scan';
 import { DetalleRutaPage } from './../pages/detalle-ruta/detalle-ruta';
-
+import { RutaPage } from './../pages/ruta/ruta';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { DetalleRutaPage } from './../pages/detalle-ruta/detalle-ruta';
     LoginPage,
     ScanPage,
     DetalleRutaPage,
-    DetallePedidoPage
+    DetallePedidoPage,
+    RutaPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +43,8 @@ import { DetalleRutaPage } from './../pages/detalle-ruta/detalle-ruta';
     LoginPage,
     ScanPage,
     DetalleRutaPage,
-    DetallePedidoPage
+    DetallePedidoPage,
+    RutaPage
   ],
   providers: [
     StatusBar,

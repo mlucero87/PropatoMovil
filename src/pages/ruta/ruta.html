@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar color="primary" padding>
+    <ion-buttons>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu">Listado de Rutas</ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let ruta of dataRutas" padding>
+    <ion-card-header>
+      Codigo Ruta: {{ruta.CodigoRuta}}
+    </ion-card-header>
+    <p>Destinos: {{ruta.Destinos}}</p>
+    <p>Remitos: {{ruta.Remitos}}</p>
+    <p>Kilos: {{ruta.Kilos}}</p>
+    <p>Bultos: {{ruta.Bultos}}</p>
+    <button ion-button block icon-left (click)=ponerRutaEnCurso(ruta.CodigoRuta)>
+      <ion-icon name="map"></ion-icon>
+      Poner en curso
+    </button>
+  </ion-card>
+</ion-content>

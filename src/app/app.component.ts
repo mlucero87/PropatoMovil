@@ -6,7 +6,8 @@ import { LoginPage } from '../pages/login/login';
 import { UsuarioProvider } from '../providers/usuario/usuario';
 import { ScanPage } from './../pages/scan/scan';
 import { DetalleRutaPage } from './../pages/detalle-ruta/detalle-ruta';
-
+import { RutaPage } from './../pages/ruta/ruta';
+import { HomePage } from '../pages/home/home';
 
 @Component({
   templateUrl: 'app.html'
@@ -16,6 +17,8 @@ export class MyApp {
   rootPage: any = LoginPage;
   DetalleRuta = DetalleRutaPage;
   Scan = ScanPage;
+  Ruta = RutaPage;
+  Home = HomePage;
   
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private _usuarioProvider: UsuarioProvider, private menuCtrl :MenuController) {
     platform.ready().then(() => {
@@ -23,7 +26,7 @@ export class MyApp {
         statusBar.styleDefault();
         splashScreen.hide();
         if (existe) {
-          this.rootPage = DetalleRutaPage;
+          this.rootPage = HomePage;
         } else {
           this.rootPage = LoginPage;
         }
