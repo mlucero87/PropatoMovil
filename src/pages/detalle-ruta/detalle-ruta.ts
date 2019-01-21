@@ -31,7 +31,13 @@ export class DetalleRutaPage {
     { CodigoRuta: "R002", ClienteCodigo: "047236", ClienteRazSoc: "ANALEN S.R.L.", ClienteDireccion: "PJE. Prometeo 3108", Remito: "R-0009-00566965", Bultos: 200, NroGuia: "000016", estado: false },
     { CodigoRuta: "R003", ClienteCodigo: "044474", ClienteRazSoc: "ARHMED SERVICIOS DE SALUD S.R.L.", ClienteDireccion: "Montevideo 665 P.7 D.715", Remito: "R-0009-00069124", Bultos: 20, NroGuia: "000018", estado: false },
     { CodigoRuta: "R003", ClienteCodigo: "046310", ClienteRazSoc: "AFRODINA S.A.", ClienteDireccion: "Goleta Sta Cruz 6873 P.4 D.E", Remito: "R-0009-00321655", Bultos: 30, NroGuia: "000019", estado: true },
-    { CodigoRuta: "R003", ClienteCodigo: "003751", ClienteRazSoc: "AGILE SYSTEMS S.A.", ClienteDireccion: "ESTOMBA 3875", Remito: "R-0009-00321658", Bultos: 100, NroGuia: "000020", estado: false }, 
+    { CodigoRuta: "R003", ClienteCodigo: "003751", ClienteRazSoc: "AGILE SYSTEMS S.A.", ClienteDireccion: "ESTOMBA 3875", Remito: "R-0009-00321658", Bultos: 100, NroGuia: "000020", estado: false },
+    
+    { CodigoRuta: "R001", ClienteCodigo: "017507", ClienteRazSoc: "ALMIRON-CINTHIA CECILIA", ClienteDireccion: "MANZANARES 1678", Remito: "R-0009-00321612", Bultos: 400, NroGuia: "000014", estado: false },
+    { CodigoRuta: "R004", ClienteCodigo: "043966", ClienteRazSoc: "ALVES PEQUENO MONIQUE", ClienteDireccion: "Av. Rivadavia 7055 Dto.15", Remito: "R-0009-00056987", Bultos: 100, NroGuia: "000015", estado: true },
+    { CodigoRuta: "R005", ClienteCodigo: "046310", ClienteRazSoc: "AFRODINA S.A.", ClienteDireccion: "Goleta Sta Cruz 6873 P.4 D.E", Remito: "R-0009-00321654", Bultos: 100, NroGuia: "000012", estado: true },
+    { CodigoRuta: "R006", ClienteCodigo: "047236", ClienteRazSoc: "ANALEN S.R.L.", ClienteDireccion: "PJE. Prometeo 3108", Remito: "R-0009-00566965", Bultos: 200, NroGuia: "000016", estado: false }, 
+
   ]
   ruta_Asignada: any;
 

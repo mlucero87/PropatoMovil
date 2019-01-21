@@ -44,10 +44,10 @@ export class ScanPage {
   cargarRuta() {
     if (this.CodigoRuta != "") {
       this.rutasFiltradas = this.dataRutaAsignada.filter(
-        r => r["CodigoRuta"] === this.CodigoRuta
+        r => r["CodigoRuta"] === this.CodigoRuta.toUpperCase()
       );
       if (this.rutasFiltradas.length > 0)
-        this.setearRutaEnCurso(this.CodigoRuta);
+        this.setearRutaEnCurso(this.CodigoRuta.toUpperCase());
         else{
           const toast = this.toastCtrl.create({
             message: "No existe la Ruta solicitada",
